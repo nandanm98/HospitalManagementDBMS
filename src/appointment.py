@@ -108,7 +108,7 @@ class Application:
 
         if self.val1 == '' or self.val2 == '' or self.val4 == '' or self.val5 == '' or self.val6 == '':
             tkinter.messagebox.showinfo("Warning", "Please Fill Up All Boxes")
-        elif int(self.val2)<0 or int(self.val2)>150 or not self.val4.isalpha() or not self.val5.isdigit():
+        elif not self.val2.isdigit() or int(self.val2)<0 or int(self.val2)>150 or not self.val4.isalpha() or not self.val5.isdigit() or len(str(self.val5))!=10:
             tkinter.messagebox.showinfo("Warning", "Invalid input")
         elif self.val6 in settings.times1:
             tkinter.messagebox.showinfo("Warning", "Appointment at this time alreadry exits\n")
